@@ -17,7 +17,7 @@ export default () => {
         {
           path: 'info1',
           name: 'info',
-          meta: { name: '学生信息管理', icon: 'iconfont icon-info', auth: true },
+          meta: { name: '成绩信息管理', icon: 'iconfont icon-info', auth: true },
           component: () => import('@/views/login/login.vue')
         }
       ]
@@ -28,7 +28,7 @@ export default () => {
         {
           path: 'info2',
           name: 'info',
-          meta: { name: '学生信息管理', icon: 'iconfont icon-info', auth: true },
+          meta: { name: '收费信息管理', icon: 'iconfont icon-info', auth: true },
           component: () => import('@/views/login/login.vue')
         }
       ]
@@ -40,5 +40,6 @@ export default () => {
       sideRouter.push(head[i].path[j])
     }
   }
+  console.log(sideRouter[0])
   return { head, sideRouter }
 }

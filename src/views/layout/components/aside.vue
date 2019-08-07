@@ -24,17 +24,17 @@
 <script>
 import Bus from '@/assets/bus.js'
 import fun from '@/router/siderPath.js'
-let { sideRouter } = fun()
+let { head } = fun()
 export default {
   name: 'Aside',
   data () {
     return {
-      Routers: sideRouter
+      Routers: head[0].path
     }
   },
   mounted () {
     Bus.$on('asidePath', res => {
-      this.asidePath = res
+      this.Routers = res
     })
   },
   methods: {
