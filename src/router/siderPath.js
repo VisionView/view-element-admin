@@ -40,6 +40,5 @@ export default () => {
       sideRouter.push(head[i].path[j])
     }
   }
-  console.log(sideRouter[0])
   return { head, sideRouter }
 }
