@@ -7,9 +7,10 @@ import fastclick from 'fastclick'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'css/reset.css'
 import 'css/elementUI.css'
+import './utils/Axios'
+
 fastclick.attach(document.body)
 Vue.use(ElementUI)
-
 Vue.config.productionTip = false
 
 // 路由守卫

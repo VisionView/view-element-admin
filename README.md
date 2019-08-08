@@ -43,6 +43,18 @@ npm i fastclick --save
 import fastclick from 'fastclick'
 fastclick.attach(document.body)
 ```
+
+### 四、axios
+``` bash
+# 安装
+npm i axios --save
+# 在src目录下建立utils文件夹，并建立Axios.js文件
+# 在Axios.js中写入一下代码：
+```
+``` js
+// Axios.js
+```
+
 ### 、路由守卫
 ``` js
 // 路由守卫

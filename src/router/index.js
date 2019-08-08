@@ -20,6 +20,16 @@ export default new Router({
       meta: { name: 'layout', auth: true },
       component: () => import('@/views/layout/layout.vue'),
       children: sideRouter
+    },
+    {
+      path: '/404',
+      name: '404',
+      mate: { name: '404' },
+      component: () => import('@/views/error/404.vue')
+    },
+    {
+      path: '*',
+      redirect: '/404'
     }
   ]
 })
