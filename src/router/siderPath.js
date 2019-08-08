@@ -3,7 +3,7 @@ export default () => {
   let head = [
     // 后台数据
     {
-      name: '后台首页',
+      name: '首页',
       path: [
         {
           path: 'echart',
@@ -20,7 +20,7 @@ export default () => {
         {
           path: 'sysmanage',
           name: 'sysmanage',
-          meta: { name: '系统设置', icon: 'iconfont icon-sys', auth: true },
+          meta: { name: '系统设置', icon: 'el-icon-user', auth: true },
           component: Main,
           children: [
             { path: '/suser', name: '/suser', meta: { name: '管理员管理', auth: true }, component: () => import('@/views/login/login.vue') }

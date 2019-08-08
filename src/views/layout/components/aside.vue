@@ -1,6 +1,6 @@
 <template>
   <div class="aside">
-    <el-menu :router="true" :default-active="asideActive">
+    <el-menu :collapse="collapse" :router="true" :default-active="asideActive">
       <template v-for="(items, index) in Routers">
         <el-submenu v-if="items.children" :index="items.name" :key="index">
           <template slot="title">
@@ -29,6 +29,7 @@ export default {
   name: 'Aside',
   data () {
     return {
+      collapse: false,
       Routers: null,
       asideActive: null
     }
@@ -39,6 +40,9 @@ export default {
     Bus.$on('asidePath', res => {
       this.Routers = res
       this.asideActive = res[0].path
+    })
+    Bus.$on('collapse', res => {
+      this.collapse = res
     })
   },
   methods: {
