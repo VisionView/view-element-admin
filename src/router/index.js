@@ -16,6 +16,7 @@ export default new Router({
     {
       path: '/',
       name: 'layout',
+      redirect: 'base',
       meta: { name: 'layout', auth: true },
       component: () => import('@/views/layout/layout.vue'),
       children: sideRouter

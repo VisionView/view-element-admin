@@ -5,7 +5,7 @@
       <img src="https://raw.githubusercontent.com/VisionView/lib/master/img/ynnu.gif" alt="logo" class="logo-img">
     </div>
     <el-menu active-text-color="#ffd04b" mode="horizontal" :default-active="defaultActive">
-      <el-menu-item v-for="(item, i) in route" :key="i" :index="item.path[0].path" @click="linkAside(item.path)">{{item.name}}</el-menu-item>
+      <el-menu-item v-for="(item, i) in route" :key="i" :index="item.path[0].path" @click="linkAside(i, item.path)">{{item.name}}</el-menu-item>
     </el-menu>
     <user-drop/>
   </div>
@@ -22,13 +22,18 @@ export default {
   },
   data () {
     return {
+      indexErr: 0,
       route: head,
       defaultActive: head[0].path[0].path
     }
   },
   methods: {
-    linkAside (path) {
-      Bus.$emit('asidePath', path)
+    linkAside (index, path) {
+      if (index !== this.indexErr) {
+        Bus.$emit('asidePath', path)
+        this.$router.push({ 'path': path[0].path })
+      }
+      this.indexErr = index
     }
   }
 }
