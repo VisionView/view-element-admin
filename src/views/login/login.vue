@@ -10,12 +10,12 @@ export default {
     }
   },
   methods: {
-    getInfo () {
-      this.$axios.post('ftghjkl;')
-    }
+    // getInfo () {
+    //   this.$axios.post('ftghjkl;')
+    // }
   },
   mounted () {
-    this.getInfo()
+    // this.getInfo()
   }
 }
 </script>
