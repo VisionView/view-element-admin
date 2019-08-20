@@ -54,7 +54,20 @@ npm i axios --save
 ``` js
 // Axios.js
 ```
+### 五、MD5加密
+``` bash
+# 安装
+npm install --save js-md5
+使用1：在需要使用的项目文件中引入import md5 from 'js-md5'
+使用：
+md5('holle')  // bcecb35d0a12baad472fbe0392bcc043
 
+使用2：在main.js文件中将md5转换成vue原型：
+import md5 from 'js-md5';
+Vue.prototype.$md5 = md5;
+# 在需要用到的文件中使用：
+this.$md5('holle') // bcecb35d0a12baad472fbe0392bcc043
+```
 ### 、路由守卫
 ``` js
 // 路由守卫
